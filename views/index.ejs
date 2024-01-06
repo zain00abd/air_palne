@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="/JSBootstrapFile/js/bootstrap.js"></script>
+  <script src="/JSBootstrapFile/popper/popper.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking_Air</title>
+  <link rel="stylesheet" href="/JSBootstrapFile/css/bootstrap.css">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/fonter/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="container mt-3" id="page_submit">
+    <a href="/view">ppp</a>
+
+    <form action="/" method="post">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label" id="tex_from"> الأسم </label>
+        <input name="Name" type="text" class="form-control" id="inp_from" aria-describedby="emailHelp" placeholder=" ادخل هنا ">
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label" id="tex_from"> نوع البسبورات </label>
+        <input name="Paspor" type="text" class="form-control" id="inp_from" placeholder=" ادخل هنا ">
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label" id="tex_from"> فيزا </label>
+        <input name="Visa" type="text" class="form-control" id="inp_from" placeholder=" ادخل هنا ">
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label" id="tex_from"> اقامة </label>
+        <input name="posin" type="text" class="form-control" id="inp_from" placeholder=" ادخل هنا ">
+      </div>
+
+      <div class="" id="page_inns">
+
+
+        <h3 class="text-white text-center mb-3 col-4" style="text-align: center; width: 100%;"> الوجهات </h3>
+
+
+
+        <div class="btn-group col-12" role="group" aria-label="Basic radio toggle button group" style="direction: ltr;">
+          <input type="radio" class="btn-check" name="radio1" id="btnradio1" autocomplete="off" value="وجهات متعددة">
+          <label class="btn btn-outline-success text-white" for="btnradio1">وجهات متعددة</label>
+
+          <input type="radio" class="btn-check" name="radio1" id="btnradio2" autocomplete="off" value="ذهاب وعودة">
+          <label class="btn btn-outline-primary text-white" for="btnradio2">ذهاب وعودة</label>
+
+          <input type="radio" class="btn-check" name="radio1" id="btnradio3" autocomplete="off" value="ذهاب فقط" checked>
+          <label class="btn btn-outline-primary text-white" for="btnradio3">ذهاب فقط</label>
+        </div>
+
+        <div class="row m-2" id="page_ins">
+<!-- one bookin -->
+          <div class="row g-1" style="background-color: #123777;" id="bookin_1">
+
+              <h5 class="col-12" style="color: #e7eeff; text-align: center;" id="tex_bookin"> خطة الرحلة </h5>
+
+            <div class="mb-3 col-sm-12 col-lg-6">
+              <div class="input-group" id="inp_from">
+                <span class="input-group-text" id="tex_from"> من </span>
+                <input name="take1" class="form-select" id="cityInput" type="text" list="cityList" placeholder=" بلد الاقلاع " key-data="inp_bookin">
+                <datalist id="cityList"></datalist>
+                <span class="input-group-text"><i class="fa-solid fa-plane-departure fa-flip-horizontal fa-xl"
+                    style="color: #c5d4f8;"></i></span>
+              </div>
+            </div>
+  
+  
+            <div class="mb-3 col-sm-12 col-lg-6">
+              <div class="input-group" id="inp_from">
+                <span class="input-group-text"> الى </span>
+                <input name="len1" class="form-select" id="cityInput" type="text" list="cityList" placeholder=" بلد الهبوط  " key-data="inp_bookin">
+                <datalist id="cityList"></datalist>
+                <span class="input-group-text"><i class="fa-solid fa-plane-arrival fa-flip-horizontal fa-xl"
+                    style="color: #c5d4f8;"></i></span>
+              </div>
+            </div>
+  
+  
+            <div class="mb-3 col-sm-12 col-lg-6">
+              <div class="input-group" id="inp_from">
+                <span class="input-group-text"> المغادرة </span>
+                <input type="date" name="date1_1" class="form-control" id="inp_from" key-data="inp_bookin">
+                <span class="input-group-text"><i class="fa-solid fa-clock-rotate-left fa-flip-horizontal fa-xl"
+                    style="color: #c5d4f8;"></i></span>
+              </div>
+            </div>
+  
+  
+            <div class="mb-3 col-sm-12 col-lg-6" style="display: none;" id="rutet">
+              <div class="input-group" id="inp_from">
+                <span class="input-group-text"> العودة </span>
+                <input type="date" name="date2_1" class="form-control" id="inp_from" key-data="inp_bookin">
+                <span class="input-group-text"><i class="fa-solid fa-clock-rotate-left fa-xl"
+                    style="color: #c5d4f8;"></i></span>
+              </div>
+            </div>
+          </div>
+<!-- 2 bookin -->
+  
+          <div class="row g-1 d-none" style="background-color: #123777;" id="bookin_2">
+
+            <h5 style="color: #e7eeff; text-align: center;"> الوجهة الثانية </h5>
+            
+            <div class="mb-3 col-sm-12 col-lg-6">
+              <div class="input-group" id="inp_from">
+                <span class="input-group-text" id="tex_from"> من </span>
+                <input class="form-select" name="take2" id="cityInput" type="text" list="cityList" placeholder=" بلد الاقلاع " key-data="inp_bookin">
+                <datalist id="cityList"></datalist>
+                <span class="input-group-text"><i class="fa-solid fa-plane-departure fa-flip-horizontal fa-xl"
+                    style="color: #c5d4f8;"></i></span>
+              </div>
+            </div>
+  
+  
+            <div class="mb-3 col-sm-12 col-lg-6">
+              <div class="input-group" id="inp_from">
+                <span class="input-group-text"> الى </span>
+                <input class="form-select" name="len2" id="cityInput" type="text" list="cityList" placeholder=" بلد الهبوط  " key-data="inp_bookin">
+                <datalist id="cityList"></datalist>
+                <span class="input-group-text"><i class="fa-solid fa-plane-arrival fa-flip-horizontal fa-xl"
+                    style="color: #c5d4f8;"></i></span>
+              </div>
+            </div>
+  
+  
+            <div class="mb-3 col-sm-12 col-lg-6">
+              <div class="input-group" id="inp_from">
+                <span class="input-group-text"> المغادرة </span>
+                <input type="date" name="date1_2" class="form-control" id="inp_from" key-data="inp_bookin">
+                <span class="input-group-text"><i class="fa-solid fa-clock-rotate-left fa-flip-horizontal fa-xl"
+                    style="color: #c5d4f8;"></i></span>
+              </div>
+            </div>
+  
+          </div>
+<!-- 3 bookin -->
+  
+          <div class="row g-1 d-none" style="background-color: #123777;" id="bookin_3">
+
+            <div class="row">
+              <button type="button" class="btn-close" aria-label="Close" style="background-color: #ff0000; border: 3px solid red;"></button>
+              <h5 style="color: #e7eeff; text-align: center;" class="col"> الوجهة الثالثة </h5>
+            </div>
+
+            <div class="mb-3 col-sm-12 col-lg-6">
+              <div class="input-group" id="inp_from">
+                <span class="input-group-text" id="tex_from"> من </span>
+                <input class="form-select" name="take3" id="cityInput" type="text" list="cityList" placeholder=" بلد الاقلاع " key-data="inp_bookin">
+                <datalist id="cityList"></datalist>
+                <span class="input-group-text"><i class="fa-solid fa-plane-departure fa-flip-horizontal fa-xl"
+                    style="color: #c5d4f8;"></i></span>
+              </div>
+            </div>
+  
+  
+            <div class="mb-3 col-sm-12 col-lg-6">
+              <div class="input-group" id="inp_from">
+                <span class="input-group-text"> الى </span>
+                <input class="form-select" name="len3" id="cityInput" type="text" list="cityList" placeholder=" بلد الهبوط  " key-data="inp_bookin">
+                <datalist id="cityList"></datalist>
+                <span class="input-group-text"><i class="fa-solid fa-plane-arrival fa-flip-horizontal fa-xl"
+                    style="color: #c5d4f8;"></i></span>
+              </div>
+            </div>
+  
+  
+            <div class="mb-3 col-sm-12 col-lg-6">
+              <div class="input-group" id="inp_from">
+                <span class="input-group-text"> المغادرة </span>
+                <input type="date" name="date1_3" class="form-control" id="inp_from" key-data="inp_bookin">
+                <span class="input-group-text"><i class="fa-solid fa-clock-rotate-left fa-flip-horizontal fa-xl"
+                    style="color: #c5d4f8;"></i></span>
+              </div>
+            </div>
+
+          </div>
+<!-- 4 bookin -->
+  
+          <div class="row g-1 d-none" style="background-color: #123777;" id="bookin_4">
+
+            <div class="row">
+              <button type="button" class="btn-close" aria-label="Close" style="background-color: #ff0000; border: 3px solid red;"></button>
+              <h5 style="color: #e7eeff; text-align: center;" class="col"> الوجهة الرابعة </h5>
+            </div>
+
+            <div class="mb-3 col-sm-12 col-lg-6">
+              <div class="input-group" id="inp_from">
+                <span class="input-group-text" id="tex_from"> من </span>
+                <input name="take4" class="form-select" id="cityInput" type="text" list="cityList" placeholder=" بلد الاقلاع " key-data="inp_bookin">
+                <datalist id="cityList"></datalist>
+                <span class="input-group-text"><i class="fa-solid fa-plane-departure fa-flip-horizontal fa-xl"
+                    style="color: #c5d4f8;"></i></span>
+              </div>
+            </div>
+  
+  
+            <div class="mb-3 col-sm-12 col-lg-6">
+              <div class="input-group" id="inp_from">
+                <span class="input-group-text"> الى </span>
+                <input name="len4" class="form-select" id="cityInput" type="text" list="cityList" placeholder=" بلد الهبوط  " key-data="inp_bookin">
+                <datalist id="cityList"></datalist>
+                <span class="input-group-text"><i class="fa-solid fa-plane-arrival fa-flip-horizontal fa-xl"
+                    style="color: #c5d4f8;"></i></span>
+              </div>
+            </div>
+  
+  
+            <div class="mb-3 col-sm-12 col-lg-6">
+              <div class="input-group" id="inp_from">
+                <span class="input-group-text"> المغادرة </span>
+                <input type="date" name="date1_4" class="form-control" id="inp_from" key-data="inp_bookin">
+                <span class="input-group-text"><i class="fa-solid fa-clock-rotate-left fa-flip-horizontal fa-xl"
+                    style="color: #c5d4f8;"></i></span>
+              </div>
+            </div>
+  
+
+          </div>
+
+          <div class="d-grid gap-2 mt-2">
+            <button class="btn btn-success" type="button" id="btn_bookins" style="display: none;"> اضافة وجهة اخرى  <i class="fa-solid fa-file-circle-plus fa-lg" style="color: #122e5e;"></i></button>
+          </div>
+        </div>
+
+        
+      </div>
+
+
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label" id="tex_from"> الشركة </label>
+        <input type="text" name="person" class="form-control" id="inp_from" placeholder=" ادخل هنا ">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label" id="tex_from"> الوزن </label>
+        <input type="number" name="kg" class="form-control" id="inp_from" placeholder=" ادخل هنا "> 
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label" id="tex_from"> رقم الهاتف </label>
+        <input type="tel" name="phone" class="form-control" id="inp_from" placeholder=" ادخل هنا ">
+      </div>
+      <div>
+
+        <button class="btn btn-primary" id="inp_submit" type="submit"> أرسال </button>
+      </div>
+    </form>
+
+  </div>
+
+  <!-- <script type="module" src="script.js"></script> -->
+  
+  <script>
+
+    let btnRadue1 = document.getElementById("btnradio1")
+    let btnRadue2 = document.getElementById("btnradio2")
+    let btnRadue3 = document.getElementById("btnradio3")
+    let inp_uot = document.getElementById("rutet")
+    let btnbookins = document.getElementById("btn_bookins")
+    let bookin1 = document.getElementById("bookin_2")
+    let bookin2 = document.getElementById("bookin_3")
+    let bookin3 = document.getElementById("bookin_4")
+    let texbookin = document.getElementById("tex_bookin")
+
+    let btnCloce = document.querySelectorAll(".btn-close")
+
+    const username = 'helonan';
+    document.getElementById('cityInput').addEventListener('input', function (event) {
+      App(event)
+    });
+
+    // document.getElementById('cityoutput').addEventListener('input', function (event) {
+    //   App(event)
+    // });
+
+    function App(e) {
+
+      const username = 'helonan';
+
+
+      const inputValue = e.target.value;
+      if (inputValue.length > 0) {
+        fetch(`https://secure.geonames.org/searchJSON?q=${inputValue}&maxRows=10&lang=ar&username=${username}`)
+          .then(response => response.json())
+          .then(data => {
+            const dataList = document.getElementById('cityList');
+            dataList.innerHTML = '';
+
+            if (data && data.geonames && data.geonames.length > 0) {
+              data.geonames.forEach(city => {
+                const option = document.createElement('option');
+                option.value = `${city.name}, ${city.countryName}`;
+                dataList.appendChild(option);
+              });
+            } else {
+              const option = document.createElement('option');
+              option.value = 'لا توجد نتائج';
+              dataList.appendChild(option);
+            }
+          })
+          .catch(error => console.error('Error fetching data:', error));
+      }
+    }
+
+    btnRadue2.addEventListener('click', () => {
+      inp_uot.style.display = 'block'
+      btnbookins.style.display = 'none'
+      bookin1.className = 'row g-1 d-none'
+      texbookin.innerHTML = ' خطة الرحلة '
+      bookin1.className = 'row g-1 d-none'
+      bookin2.className = 'row g-1 d-none'
+      bookin3.className = 'row g-1 d-none'
+
+    });
+    btnRadue3.addEventListener('click', () => {
+      inp_uot.style.display = 'none'
+      btnbookins.style.display = 'none'
+      bookin1.className = 'row g-1 d-none'
+      bookin2.className = 'row g-1 d-none'
+      bookin3.className = 'row g-1 d-none'
+      texbookin.innerHTML = ' خطة الرحلة '
+
+    });
+    btnRadue1.addEventListener('click', () => {
+      texbookin.innerHTML = ' الوجهة الاولى '
+      inp_uot.style.display = 'none'
+      btnbookins.style.display = 'block'
+      bookin1.className = 'row g-1'
+    });
+
+    
+    btnbookins.addEventListener('click', () => {
+      if(bookin2.className == 'row g-1')
+      bookin3.className = 'row g-1'
+
+      bookin2.className = 'row g-1'
+    });
+
+    btnCloce.forEach((delet) =>{
+      delet.addEventListener('click', () =>{
+        delet.parentNode.parentNode.className = 'row g-1 d-none'
+      })
+
+    })
+
+
+  </script>
+
+</body>
+
+</html>
